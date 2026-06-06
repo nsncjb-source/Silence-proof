@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Silence Verification</title>
+    <style>
+        body {
+            background: #0d0d0d;
+            color: white;
+            font-family: Consolas, monospace;
+            padding: 40px;
+        }
+        .box {
+            border: 1px solid #444;
+            padding: 20px;
+            width: 500px;
+            background: #111;
+        }
+        h1 {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Silence Verification</h1>
+    <p><b>Version:</b> <span id="version"></span></p>
+    <p><b>Build:</b> <span id="build"></span></p>
+    <p><b>Status:</b> Verified ✔️</p>
+    <p><b>Discord:</b> <a id="discord" href="#" style="color:#00aaff;">Join Server</a></p>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("version").textContent = params.get("v") || "Unknown";
+    document.getElementById("build").textContent = params.get("build") || "Unknown";
+    document.getElementById("discord").href = "https://discord.gg/QKRQ6RpUcC";
+</script>
+
+</body>
+</html>
